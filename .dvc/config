@@ -1,4 +1,4 @@
 [core]
     remote = myremote
 ['remote "myremote"']
-    url = s3://lm-insurance-data/
+    url = s3://lm-insurance-data/mydata/
