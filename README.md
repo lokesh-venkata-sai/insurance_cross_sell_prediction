@@ -215,6 +215,8 @@ A step-by-step guide to deploying the Docker container using AWS ECS.
 ### Access the Running Service
 Once the service is deployed, go to the ECS cluster’s “Services” tab. Find the service, go to the “Tasks” tab, and select a running task. Open the public IP address of the task to access the FastAPI application.
 
+![img_2.png](img_2.png)
+
 ## Monitoring with Evidently AI
 
 I used Evidently AI to monitor the data drift.
@@ -233,6 +235,8 @@ pip install evidently
 pip install evidently @ git+https://github.com/evidentlyai/evidently.git
 
 ```
+
+![img_3.png](img_3.png)
 
 Run the monitoring script regularly on incoming data to generate reports on data 
 drift and model performance. These reports can help us identify when retraining is 
