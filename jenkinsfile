@@ -31,7 +31,7 @@ agent any
     post {
         always {
             echo 'This will always run.'
-            sh 'docker logout'
+//             sh 'docker logout'
         }
 
         success {

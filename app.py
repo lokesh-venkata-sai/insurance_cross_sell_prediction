@@ -27,7 +27,7 @@ model = joblib.load(model_file_path)
 
 @app.get("/")
 async def read_root():
-    return {"health_check": "OK", "model_version": 1}
+    return {"health_check": "OK", "model_version": 2}
 
 
 @app.post("/predict")
