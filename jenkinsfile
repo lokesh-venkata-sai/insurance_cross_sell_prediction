@@ -1,0 +1,47 @@
+//This file will create a CI/CD pipeline for building and deploying the docker image to docker hub using Github as source.
+pipeline{
+    environment {
+	    	registry = "lokeshmamidi99/insurance_api"
+            registryCredential = 'docker'
+//             def dateTag = new Date().format("yyyyMMdd-HHmmss")
+            def dateTag = "latest"
+        }
+agent any
+  stages{
+    stage('Initialize') {
+            steps {
+                script {
+                    echo 'Starting the pipeline...'
+                }
+            }
+        }
+    stage('Build Docker Image and Pushing latest code to Docker Hub') {
+            steps {
+                script {
+                    echo 'Building the application...'
+                    docker.withRegistry('',registryCredential) {
+                        def image = docker.build("${registry}:${dateTag}", ".")
+                        image.push()
+                    }
+                }
+            }
+        }
+  }
+
+    post {
+        always {
+            echo 'This will always run.'
+            sh 'docker logout'
+        }
+
+        success {
+            // Commands that you want to run only if the pipeline was successful
+            echo 'Build was successful!'
+        }
+
+        failure {
+            // Commands that you want to run only if the pipeline failed
+            echo 'Build failed!'
+        }
+    }
+}
