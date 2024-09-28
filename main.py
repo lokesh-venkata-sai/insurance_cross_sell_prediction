@@ -80,8 +80,10 @@ def train_with_mlflow():
         logging.info("Model evaluation completed successfully")
 
         # Tags
-        mlflow.set_tag('Model developer', 'prsdm')
+        mlflow.set_tag('Model developer', 'lokesh')
         mlflow.set_tag('preprocessing', 'OneHotEncoder, Standard Scaler, and MinMax Scaler')
+        mlflow.set_tag('Balancing strategy', 'SMOTE = 1.0')
+        mlflow.set_tag('model_name', config['model']['name'])
 
         # Log metrics
         model_params = config['model']['params']
@@ -97,7 +99,7 @@ def train_with_mlflow():
         model_uri = f"runs:/{run.info.run_id}/model"
         mlflow.register_model(model_uri, model_name)
 
-        logging.info("MLflow tracking completed successfully")
+        logging.info("ML flow tracking completed successfully")
 
         # Print evaluation results
         print("\n============= Model Evaluation Results ==============")
@@ -108,5 +110,5 @@ def train_with_mlflow():
 
 
 if __name__ == "__main__":
-    main()
-    # train_with_mlflow()
+    # main()
+    train_with_mlflow()

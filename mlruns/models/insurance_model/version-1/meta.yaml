@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1727477082809
+current_stage: None
+description: null
+last_updated_timestamp: 1727477082809
+name: insurance_model
+run_id: 7cf56e0985ea4a28ad999ab4f1c352fe
+run_link: null
+source: file:///D:/Study/Projects/insurance_cross_sell_prediction/mlruns/362886862385626992/7cf56e0985ea4a28ad999ab4f1c352fe/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///D:/Study/Projects/insurance_cross_sell_prediction/mlruns/362886862385626992/7cf56e0985ea4a28ad999ab4f1c352fe/artifacts/model
+user_id: null
+version: 1

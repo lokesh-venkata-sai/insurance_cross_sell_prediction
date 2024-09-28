@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Study/Projects/insurance_cross_sell_prediction/mlruns/362886862385626992/7cf56e0985ea4a28ad999ab4f1c352fe/artifacts
+end_time: 1727477082854
+entry_point_name: ''
+experiment_id: '362886862385626992'
+lifecycle_stage: active
+run_id: 7cf56e0985ea4a28ad999ab4f1c352fe
+run_name: useful-mink-777
+run_uuid: 7cf56e0985ea4a28ad999ab4f1c352fe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727477069688
+status: 3
+tags: []
+user_id: mloke

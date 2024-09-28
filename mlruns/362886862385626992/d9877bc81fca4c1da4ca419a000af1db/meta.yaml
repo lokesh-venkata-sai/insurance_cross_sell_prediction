@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Study/Projects/insurance_cross_sell_prediction/mlruns/362886862385626992/d9877bc81fca4c1da4ca419a000af1db/artifacts
+end_time: 1727478843342
+entry_point_name: ''
+experiment_id: '362886862385626992'
+lifecycle_stage: active
+run_id: d9877bc81fca4c1da4ca419a000af1db
+run_name: unequaled-panda-372
+run_uuid: d9877bc81fca4c1da4ca419a000af1db
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727478835780
+status: 3
+tags: []
+user_id: mloke

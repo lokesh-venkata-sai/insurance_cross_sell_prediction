@@ -14,4 +14,5 @@ PyYAML==6.0.2
 scikit-learn==1.5.2
 setuptools==75.1.0
 uvicorn==0.31.0
+# evidently==0.4.38
 # evidently @ git+https://github.com/evidentlyai/evidently.git

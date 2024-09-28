@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Study/Projects/insurance_cross_sell_prediction/mlruns/362886862385626992/3f83b8692d8d4834b31b45f6fed5c1ef/artifacts
+end_time: 1727477320965
+entry_point_name: ''
+experiment_id: '362886862385626992'
+lifecycle_stage: active
+run_id: 3f83b8692d8d4834b31b45f6fed5c1ef
+run_name: indecisive-bear-406
+run_uuid: 3f83b8692d8d4834b31b45f6fed5c1ef
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727477311749
+status: 3
+tags: []
+user_id: mloke
