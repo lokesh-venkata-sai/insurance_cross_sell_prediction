@@ -29,17 +29,17 @@ agent any
                 }
             }
         }
-    stage('Update AWS ECS Service') {
-            steps {
-                script {
-                    echo 'Updating AWS ECS Service...'
-                    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: awsCredential]]) {
-                        sh "aws ecs update-service --cluster ${clusterName} --service ${serviceName} --force-new-deployment"
-                    }
-                }
-            }
-        }
-  }
+//     stage('Update AWS ECS Service') {
+//             steps {
+//                 script {
+//                     echo 'Updating AWS ECS Service...'
+//                     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: awsCredential]]) {
+//                         sh "aws ecs update-service --cluster ${clusterName} --service ${serviceName} --force-new-deployment"
+//                     }
+//                 }
+//             }
+//         }
+//   }
 
     post {
         always {
