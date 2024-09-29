@@ -2,6 +2,18 @@
 
 The goal of this project is to predict which customers are most likely to purchase additional insurance products using a machine learning model. This project incorporates MLOps practices using MLflow, DVC, and other tools.
 
+## Techstack:
+1. Python - Fast API
+2. AWS ECS, S3, IAM
+3. Jenkins
+4. Docker
+5. MLflow
+6. Evidently AI
+7. DVC (Data Version Control)
+
+## Architecture
+![img_4.png](img_4.png)
+
 All the commands are based on windows (Mac/Linux: Subject to change)
 
 ## Setup
