@@ -5,6 +5,9 @@ pipeline{
             registryCredential = 'docker'
 //             def dateTag = new Date().format("yyyyMMdd-HHmmss")
             def dateTag = "latest"
+            awsCredential = 'aws'  // The ID of your AWS credentials in Jenkins
+            clusterName = 'insurance_api1'  // Replace with your actual ECS cluster name
+            serviceName = 'insurance_api_service'  // Replace with your actual ECS service name
         }
 agent any
   stages{
@@ -22,6 +25,16 @@ agent any
                     docker.withRegistry('',registryCredential) {
                         def image = docker.build("${registry}:${dateTag}", ".")
                         image.push()
+                    }
+                }
+            }
+        }
+    stage('Update AWS ECS Service') {
+            steps {
+                script {
+                    echo 'Updating AWS ECS Service...'
+                    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: awsCredential]]) {
+                        sh "aws ecs update-service --cluster ${clusterName} --service ${serviceName} --force-new-deployment"
                     }
                 }
             }
